@@ -1,0 +1,24 @@
+name: Documentation
+description: Aggiungi o aggiorna la documentazione
+title: 'docs: [breve descrizione]'
+labels: ['documentation']
+body: 
+  - type: markdown
+    attributes:
+      value: |
+        Aggiungi o aggiorna la documentazione in modo chiaro e dettagliato.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione
+      description: 'Spiega cosa vuoi aggiungere o modificare'
+      placeholder: 'Aggiungi la documentazione per la funzione di login'
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note aggiuntive (opzionale)
+      description: 'Qualsiasi altra info utile'
