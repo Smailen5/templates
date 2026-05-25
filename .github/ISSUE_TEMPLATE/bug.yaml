@@ -1,0 +1,56 @@
+name: Bug Report
+description: Segnala un bug nel progetto
+title: 'bug: [breve descrizione del problema]'
+labels: ['bug']
+assignees: 'Smailen5'
+body:
+ - type: markdown
+   attributes:
+     value: |
+       Descrivi quanto piu' possibile il bug, in modo chiaro e dettagliato.
+
+ - type: textarea
+   id: description
+   attributes:
+     label: Descrizione
+     description: 'Spiega cosa non funziona.'
+     placeholder: "Il pulsante dettagli non funziona quando clicco su di esso"
+   validations:
+     required: true
+
+ - type: textarea
+   id: steps
+   attributes:
+     label: Passaggi per riprodurre
+     description: 'Descrivi i passaggi per riprodurre il problema'
+     placeholder: |
+       - Vai alla pagina...
+       - Clicca sul pulsante...
+       - Scrolla fino a...
+       - Errore...
+   validations:
+     required: true
+
+ - type: textarea
+   id: logs
+   attributes:
+     label: Log o errori (opzionale ma gradito)
+     description: 'Inserisci i log o errori che stai riscontrando'
+     placeholder: |
+      ```ts
+      /* log DevTools
+      Errore del componente Button
+      ```
+     render: shell
+
+ - type: textarea
+   id: screenshots
+   attributes:
+     label: Screenshots o video (opzionale)
+     description: 'Screenshot o video che mostra il problema'
+
+ - type: textarea
+   id: notes
+   attributes:
+     label: Note aggiuntive (opzionale)
+     description: 'Qualsiasi altra info utile'
