@@ -1,0 +1,24 @@
+name: Refactor
+description: Refactoring del codice
+title: 'refactor: [descrizione breve]'
+labels: ['refactor']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descrivi il refactoring in modo chiaro e dettagliato.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📋 Descrizione
+      description: 'Spiega cosa vuoi migliorare.'
+      placeholder: "Es. 'Migliorare il componente CardProject'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Note aggiuntive (opzionale)
+      description: 'Qualsiasi altra info utile'
