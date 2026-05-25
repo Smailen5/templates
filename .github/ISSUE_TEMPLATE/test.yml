@@ -1,0 +1,24 @@
+name: Test
+description: Crea un nuovo test o modifica un test esistente
+title: 'test: [descrizione breve]'
+label: ['test']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descrivi il test in modo chiaro e dettagliato.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione
+      description: 'Spiega cosa vuoi testare'
+      placeholder: 'Aggiungi test pe la funzione di login o Aggiorna i test per la funzione di login'
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note aggiuntive (opzionali)
+      description: 'Qualsiasi altra info utile'
