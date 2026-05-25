@@ -1,7 +1,7 @@
 name: Test
 description: Crea o migliora la suite di test (unitari, e2e, integrazione)
 title: 'test: [descrizione breve]'
-label: ['test']
+labels: ['test']
 body:
   - type: markdown
     attributes:
