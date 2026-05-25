@@ -1,6 +1,6 @@
 name: Bug Report
-description: Segnala un bug nel progetto
-title: 'bug: [breve descrizione del problema]'
+description: Segnala e risolvi un malfunzionamento nel codice
+title: 'bug: [descrizione breve]'
 labels: ['bug']
 assignees: 'Smailen5'
 body:
@@ -12,45 +12,43 @@ body:
  - type: textarea
    id: description
    attributes:
-     label: Descrizione
-     description: 'Spiega cosa non funziona.'
-     placeholder: "Il pulsante dettagli non funziona quando clicco su di esso"
+     label: Descrizione e Riproduzione
+     description: "Cosa si e' rotto e quali sono i passaggi per riprodurre l'errore?"
+     placeholder: |
+       Il componente di login va in crash.
+       1. Vai su /login
+       2. Inserisci le credenziali
+       3. Clicca 'Accedi' -> Schermata bianca
    validations:
      required: true
 
  - type: textarea
-   id: steps
+   id: acceptance_criteria
    attributes:
-     label: Passaggi per riprodurre
-     description: 'Descrivi i passaggi per riprodurre il problema'
+     label: Comportamento Atteso (Criteri di Accettazione)
+     description: "Come dovrebbe funzionare correttamente?"
      placeholder: |
-       - Vai alla pagina...
-       - Clicca sul pulsante...
-       - Scrolla fino a...
-       - Errore...
+       - Il login deve completarsi con successo
+       - L'utente deve essere reindirizzato alla dashboard
+       - Nessun errore in console
+   validations:
+     required: true
+
+ - type: textarea
+   id: task
+   attributes:
+     label: Task (Risoluzione)
+     description: "Ipotesi o passaggi tecnici per risolvere il bug."
+     placeholder: |
+       - [ ] Verificare il payload della richiesta API
+       - [ ] Aggiungere blocco try/catch nel gestore del click
+       - [ ] Scrivere test per evitare regressioni
    validations:
      required: true
 
  - type: textarea
    id: logs
    attributes:
-     label: Log o errori (opzionale ma gradito)
-     description: 'Inserisci i log o errori che stai riscontrando'
-     placeholder: |
-      ```ts
-      /* log DevTools
-      Errore del componente Button
-      ```
+     label: Log / Stack Trace (Fortemente consigliato)
+     placeholder: "Incolla qui l'errore del terminale o della console del browser."
      render: shell
-
- - type: textarea
-   id: screenshots
-   attributes:
-     label: Screenshots o video (opzionale)
-     description: 'Screenshot o video che mostra il problema'
-
- - type: textarea
-   id: notes
-   attributes:
-     label: Note aggiuntive (opzionale)
-     description: 'Qualsiasi altra info utile'
