@@ -1,0 +1,63 @@
+name: Feature Request
+description: Aggiungi una nuova funzione
+title: 'feat: [descrizione breve]'
+labels: ['feature', 'enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descrivi la feature che vorresti aggiungere in modo chiaro e dettagliato.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione
+      description: 'Spiega cosa vorresti aggiungere.'
+      placeholder: 'Aggiungi la funzione di login'
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivazione
+      description: "Spiega perche' la feature e' necessaria."
+      placeholder: "La funzione di login e' necessaria per permettere agli utenti di accedere al sistema"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed_description
+    attributes:
+      label: Descrizione dettagliata
+      description: "Spiega nel dettaglio come la feature dovrebbe funzionare."
+      placeholder: 'La funzione di login deve permettere agli utenti di accedere al sistema tramite email e password'
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Casi di uso tipici (opzionale)
+      description: "Elenca i casi di uso tipici con un elenco non ordinato."
+      placeholder: |
+        - Caso di uso 1: 'Gli utenti possono avere un'area personale per salvare i loro preferiti'
+
+  - type: textarea
+    id: resource_example
+    attributes:
+      label: Esempio di implementazione (opzionale)
+      description: "Se hai un esempio di implementazione, documentazione o link, inseriscilo qui"
+      placeholder: '[link](https://www.documentazione.com) risolve il problema'
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot, video, link o documentazione (opzionale)
+      description: 'Screenshot, video, link o documentazione che ritieni utile da aggiungere'
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note aggiuntive (opzionale)
+      placeholder: 'Qualsiasi altra info utile'
