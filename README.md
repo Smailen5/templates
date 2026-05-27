@@ -37,8 +37,6 @@ Template PR con sezioni per descrizione, riferimenti all'issue, modifiche effett
 
 ### `.gitignore`
 
-Regole generali per escludere artefatti di build, cache e file sensibili dell'IDE.
-
 ### `LICENSE`
 
 Licenza MIT standard.
