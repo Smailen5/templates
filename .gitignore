@@ -26,6 +26,7 @@ out/
 .next/
 .tsbuildinfo
 *.local
+*.cache
 
 # ==============================
 # File di configurazione e Test
@@ -58,10 +59,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
-*.cache
-!.env.example
-!.env.sample
-!.gitignore
 
 # ==============================
 # Agenti e AI
