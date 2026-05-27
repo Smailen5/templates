@@ -1,6 +1,6 @@
 # templates
 
-Template GitHub per nuovi repository. Include una struttura standardizzata di issue template, pull request template, gitignore e licenza, ottimizzata per progetti AL (Dynamics 365 Business Central) ma adattabile a qualsiasi progetto.
+Template GitHub per nuovi repository. Include una struttura standardizzata di issue template, pull request template, gitignore e licenza, adattabile a qualsiasi progetto.
 
 ## Struttura del progetto
 
@@ -15,7 +15,7 @@ Template GitHub per nuovi repository. Include una struttura standardizzata di is
 │   │   ├── test.yaml         # Richiesta test
 │   │   └── config.yml        # Disabilita issue vuote
 │   └── pull_request_template.md  # Template per PR
-├── .gitignore                # Regole per AL / Dynamics 365 BC
+├── .gitignore                # Regole generali per il progetto
 ├── LICENSE                   # Licenza MIT
 └── README.md                 # Questo file
 ```
@@ -37,7 +37,7 @@ Template PR con sezioni per descrizione, riferimenti all'issue, modifiche effett
 
 ### `.gitignore`
 
-Regole specifiche per progetti AL: esclude `.app`, `.alcache/`, `.alpackages/`, `.snapshots/`, `.output/`, file di licenza e cache di VS Code.
+Regole generali per escludere artefatti di build, cache e file sensibili dell'IDE.
 
 ### `LICENSE`
 
