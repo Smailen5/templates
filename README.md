@@ -100,10 +100,20 @@ Usa la **classica branch protection rule** (non Rulesets):
    - ☑ **"Require a pull request before merging"**
    - ☑ **"Require branches to be up to date before merging"**
    - ☑ **"Require status checks to pass before merging"** (se ci sono CI)
-5. Nella sezione **"Protect matching branches"**:
+5. Nella sezione **"Rules applied to everyone including administrators"**:
    - ☑ **"Do not allow bypassing the above settings"**
- 6. **"Lock branch"** lascialo **spento** — blocca main rendendolo read-only e impedirebbe anche i merge via PR.
- 7. Salva la regola.
+6. Spunta **"Require linear history"** per evitare merge commit e mantenere una cronologia pulita.
+7. Spunta anche:
+   - ☑ **"Require approvals"** (imposta almeno 1)
+   - ☑ **"Dismiss stale pull request approvals when new commits are pushed"**
+8. **"Lock branch"** lascialo **spento** — blocca main rendendolo read-only e impedirebbe anche i merge via PR.
+9. Salva la regola.
+
+Con questa configurazione, ogni PR su `main` richiede almeno una review approvata prima del merge. La review può essere fatta da:
+- Un collaboratore umano
+- Un agente AI tramite `gh pr review --approve`
+
+> **Nota:** le review di un agente non sono recensite da GitHub come "review ufficiali" a meno che l'agente non sia autenticato con un token con permessi sufficienti. In ogni caso, la regola garantisce che nessun cambiamento arrivi su `main` senza un controllo.
 
 ## Licenza
 
