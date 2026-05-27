@@ -1,23 +1,67 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# Template per tutti i progetti
+
+# ==============================
+# Dipendenze
+# ==============================
+node-modules/
+/.pnp
+.pnp.js
+
+# ==============================
+# Log
+# ==============================
+logs
+*.logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==============================
+# Build e Output
+# ==============================
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.tsbuildinfo
+*.local
+*.cache
+
+# ==============================
+# File di configurazione e Test
+# ==============================
+coverage/
+.nyc_output/
+.eslintignore
+.eslintrc.cjs
+.netlify
+
+# ==============================
+# Variabili d'Ambiente (Sicurezza)
+# ==============================
+.env
+.env-local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==============================
+# File di Sistema e IDE
+# ==============================
+.DS_Store
+Thumbs.db
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
+!.vscode/extensions.json
+.cursor
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==============================
+# Agenti e AI
+# ==============================
+.agents
+.cursorrules
