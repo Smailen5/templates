@@ -113,8 +113,6 @@ Con questa configurazione, ogni PR su `main` richiede almeno una review approvat
 - Un collaboratore umano
 - Un agente AI tramite `gh pr review --approve`
 
-> **Nota:** le review di un agente non sono recensite da GitHub come "review ufficiali" a meno che l'agente non sia autenticato con un token con permessi sufficienti. In ogni caso, la regola garantisce che nessun cambiamento arrivi su `main` senza un controllo.
-
 ## Licenza
 
 Distribuito con licenza MIT. Vedi [LICENSE](LICENSE) per i dettagli.
