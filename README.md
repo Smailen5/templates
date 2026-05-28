@@ -109,10 +109,6 @@ Usa la **classica branch protection rule** (non Rulesets):
 8. **"Lock branch"** lascialo **spento** — blocca main rendendolo read-only e impedirebbe anche i merge via PR.
 9. Salva la regola.
 
-Con questa configurazione, ogni PR su `main` richiede almeno una review approvata prima del merge. La review può essere fatta da:
-- Un collaboratore umano
-- Un agente AI tramite `gh pr review --approve`
-
 ## Licenza
 
 Distribuito con licenza MIT. Vedi [LICENSE](LICENSE) per i dettagli.
