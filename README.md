@@ -268,6 +268,15 @@ Per configurazioni più avanzate (es. monorepo, path multipli), aggiungi un file
 
 Le impostazioni di GitHub **non vengono ereditate** dal template. Su ogni nuovo repository vanno configurate manualmente.
 
+### Permessi workflow (obbligatorio per release-please)
+
+**Settings > Actions > General > Workflow permissions**:
+
+- ☑ **"Read and write permissions"**
+- ☑ **"Allow GitHub Actions to create and approve pull requests"**
+
+Senza questa impostazione, workflow come release-please non possono creare PR.
+
 ### Impostazioni pull request
 
 **Settings > General > Pull Requests**:
