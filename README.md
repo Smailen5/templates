@@ -55,7 +55,7 @@ Struttura standard: Descrizione, Riferimenti Issue, Modifiche Effettuate, Checkl
 
 ### `.gitignore`
 
-Regole per progetti AL / Dynamics 365 Business Central. Sostituiscilo con un `.gitignore` adatto al tuo stack (es. Node, Python) se necessario.
+Placeholder generico. Sostituiscilo con un `.gitignore` adatto al tuo stack (es. Node, Python).
 
 ### `.prettierrc` — Configurazione formattazione
 
