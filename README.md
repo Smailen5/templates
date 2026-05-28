@@ -221,9 +221,13 @@ Se vuoi cambiare modello o provider, modifica il file `.github/workflows/opencod
     YOUR_API_KEY: ${{ secrets.YOUR_API_KEY }}
   with:
     model: provider/modello-desiderato
+    prompt: |
+      Quando fai commit, usa i Conventional Commits senza scope.
+      Prefissi: feat, fix, docs, chore, refactor, test.
+      Scrivi i messaggi in italiano.
 ```
 
-Cambia `DEEPSEEK_API_KEY` con la variabile del tuo provider e `model` con l'ID del modello.
+Cambia `DEEPSEEK_API_KEY` con la variabile del tuo provider, `model` con l'ID del modello e `prompt` con le istruzioni che preferisci per l'agente.
 
 ## Configurazione repository
 

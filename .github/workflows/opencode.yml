@@ -31,3 +31,9 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         with:
           model: deepseek/deepseek-v4-flash
+          prompt: |
+            Quando fai commit, usa i Conventional Commits senza scope.
+            Prefissi: feat, fix, docs, chore, refactor, test.
+            Scrivi i messaggi in italiano.
+            Esempio corretto: "docs: aggiornato README con struttura del progetto"
+            Esempio errato: "Aggiornato file readme"
