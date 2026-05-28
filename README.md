@@ -15,7 +15,8 @@ Template GitHub per nuovi progetti. Standardizza il tooling iniziale (linting, f
 │   │   ├── test.yaml         # Richiesta test
 │   │   └── config.yml        # Disabilita issue vuote
 │   ├── workflows/
-│   │   └── opencode.yml      # Workflow AI per PR e issue
+│   │   ├── opencode.yml      # Workflow AI per PR e issue
+│   │   └── release-please.yml  # Automazione versioni e rilascio
 │   └── pull_request_template.md
 ├── .gitignore
 ├── .prettierrc
@@ -228,6 +229,40 @@ Se vuoi cambiare modello o provider, modifica il file `.github/workflows/opencod
 ```
 
 Cambia `DEEPSEEK_API_KEY` con la variabile del tuo provider, `model` con l'ID del modello e `prompt` con le istruzioni che preferisci per l'agente.
+
+## Workflow release-please
+
+Il file `.github/workflows/release-please.yml` automatizza la gestione delle versioni del progetto.
+
+### Come funziona
+
+A ogni push sul branch `main`, release-please analizza i commit usando i Conventional Commits per determinare il tipo di incremento di versione (patch, minor, major). Poi apre o aggiorna una **Release PR** che:
+
+- Propone il nuovo numero di versione
+- Aggiorna `package.json` con la versione
+- Genera il `CHANGELOG.md` basato sui commit
+- Crea una GitHub Release quando la PR viene mergiata
+
+### Come usarlo
+
+1. Scrivi i commit usando i **Conventional Commits** (es. `feat:`, `fix:`, `docs:`).
+2. Quando vuoi rilasciare, vai su GitHub e apri la Release PR creata da release-please.
+3. Verifica il changelog e la versione proposta.
+4. Se tutto ok, mergia la PR. release-please creerà automaticamente il tag e la GitHub Release.
+
+### Personalizzazione
+
+Se vuoi configurare branch aggiuntivi o release-type diversi, modifica il file:
+
+```yaml
+- uses: googleapis/release-please-action@v4
+  with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+    release-type: node
+    # Altre opzioni: python, terraform, simple, ecc.
+```
+
+Per configurazioni più avanzate (es. monorepo, path multipli), aggiungi un file `release-please-config.json` nella root del progetto.
 
 ## Configurazione repository
 
