@@ -102,12 +102,8 @@ Usa la **classica branch protection rule** (non Rulesets):
    - ☑ **"Require status checks to pass before merging"** (se ci sono CI)
 5. Nella sezione **"Rules applied to everyone including administrators"**:
    - ☑ **"Do not allow bypassing the above settings"**
-6. Spunta **"Require linear history"** per evitare merge commit e mantenere una cronologia pulita.
-7. Spunta anche:
-   - ☑ **"Require approvals"** (imposta almeno 1)
-   - ☑ **"Dismiss stale pull request approvals when new commits are pushed"**
-8. **"Lock branch"** lascialo **spento** — blocca main rendendolo read-only e impedirebbe anche i merge via PR.
-9. Salva la regola.
+6. **"Lock branch"** lascialo **spento** — blocca main rendendolo read-only e impedirebbe anche i merge via PR.
+7. Salva la regola.
 
 ## Licenza
 
