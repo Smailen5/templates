@@ -1,0 +1,15 @@
+# Ignora le cartelle
+node_modules
+dist
+build
+.netlify
+.github
+src/assets
+release
+
+# Ignora i file
+routeTree.gen.ts
+eslint.config.js
+.prettierrc
+pnpm-lock.yaml
+CHANGELOG.md
