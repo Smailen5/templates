@@ -1,5 +1,8 @@
 # templates
 
+![GitHub Release](https://img.shields.io/github/v/release/Smailen5/templates?style=flat-square&logo=github)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/Smailen5/templates?style=flat-square&logo=github)
+
 Template GitHub per nuovi progetti. Standardizza il tooling iniziale (linting, formattazione, TypeScript, issue/PR template) così da evitare di reimpostare tutto da zero ogni volta.
 
 ## Struttura del progetto
