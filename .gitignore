@@ -3,7 +3,7 @@
 # ==================================================
 # Dipendenze
 # ==================================================
-node-modules/
+node_modules/
 /.pnp
 .pnp.js
 
@@ -11,7 +11,7 @@ node-modules/
 # Log
 # ==================================================
 logs
-*.logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
