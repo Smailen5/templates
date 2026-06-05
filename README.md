@@ -39,13 +39,13 @@ Template GitHub per nuovi progetti. Standardizza il tooling iniziale (linting, f
 
 Template YAML allineati ai Conventional Commits:
 
-| File | Titolo | Label | Cosa richiede |
-|------|--------|-------|---------------|
-| `bug.yaml` | `bug:` | `bug` | Descrizione, riproduzione, log/stack trace |
-| `feat.yaml` | `feat:` | `feature`, `enhancement` | Criteri di accettazione, task list |
-| `docs.yaml` | `docs:` | `documentation` | Doc mancante o obsoleta |
-| `refactor.yaml` | `refactor:` | `refactor` | Struttura, performance, modularità |
-| `test.yaml` | `test:` | `test` | Copertura, scenari, task |
+| File            | Titolo      | Label                    | Cosa richiede                              |
+| --------------- | ----------- | ------------------------ | ------------------------------------------ |
+| `bug.yaml`      | `bug:`      | `bug`                    | Descrizione, riproduzione, log/stack trace |
+| `feat.yaml`     | `feat:`     | `feature`, `enhancement` | Criteri di accettazione, task list         |
+| `docs.yaml`     | `docs:`     | `documentation`          | Doc mancante o obsoleta                    |
+| `refactor.yaml` | `refactor:` | `refactor`               | Struttura, performance, modularità         |
+| `test.yaml`     | `test:`     | `test`                   | Copertura, scenari, task                   |
 
 `config.yml` disabilita la creazione di issue vuote — si usano solo i template.
 
@@ -95,11 +95,11 @@ Nessuna dipendenza inclusa. Le installi tu in base al progetto.
 
 Pattern standard Vite a 3 file:
 
-| File | Target | Include |
-|------|--------|---------|
-| `tsconfig.json` | — | Root, collega i due riferimenti |
-| `tsconfig.app.json` | ES2020 + DOM + jsx | `src/` |
-| `tsconfig.node.json` | ES2022 | `vite.config.ts` |
+| File                 | Target             | Include                         |
+| -------------------- | ------------------ | ------------------------------- |
+| `tsconfig.json`      | —                  | Root, collega i due riferimenti |
+| `tsconfig.app.json`  | ES2020 + DOM + jsx | `src/`                          |
+| `tsconfig.node.json` | ES2022             | `vite.config.ts`                |
 
 ### `LICENSE`
 
@@ -109,13 +109,13 @@ Licenza MIT.
 
 Il template fornisce la base per:
 
-| Strumento | Cosa fa |
-|-----------|---------|
-| **pnpm** | Package manager veloce |
+| Strumento      | Cosa fa                    |
+| -------------- | -------------------------- |
+| **pnpm**       | Package manager veloce     |
 | **TypeScript** | Controllo statico dei tipi |
-| **ESLint** | Analisi statica del codice |
-| **Prettier** | Formattazione automatica |
-| **opencode** | AI agent su GitHub Actions |
+| **ESLint**     | Analisi statica del codice |
+| **Prettier**   | Formattazione automatica   |
+| **opencode**   | AI agent su GitHub Actions |
 
 ## Come utilizzare questo template
 
@@ -313,6 +313,7 @@ Usa la **classica branch protection rule** (non Rulesets):
 6. Salva.
 
 Con questa configurazione:
+
 - Nessuno pusha direttamente su `main`
 - Ogni modifica passa da una PR
 - Serve almeno una review approvata per fare merge
