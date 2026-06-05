@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/Smailen5/templates/compare/v1.0.0...v1.1.0) (2026-06-05)
+
+
+### Features
+
+* aggiunta supporto file design Frontend Mentor nel .gitignore ([#29](https://github.com/Smailen5/templates/issues/29)) ([6fb6e2b](https://github.com/Smailen5/templates/commit/6fb6e2b1cec87d899c254faebd3392a0eab28a04))
+
+
+### Bug Fixes
+
+* correggi errori di typo nel .gitignore ([#34](https://github.com/Smailen5/templates/issues/34)) ([22191d1](https://github.com/Smailen5/templates/commit/22191d10547c5d92853d55b35646f07f7f816e28))
+
 ## 1.0.0 (2026-05-28)
 
 
