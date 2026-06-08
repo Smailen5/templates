@@ -259,11 +259,19 @@ Il file `.github/workflows/release-please.yml` automatizza la gestione delle ver
 
 ### Come funziona
 
-A ogni push sul branch `main`, release-please analizza i commit usando i Conventional Commits per determinare il tipo di incremento di versione (patch, minor, major). Poi apre o aggiorna una **Release PR** che:
+A ogni push sul branch `main`, release-please analizza i commit usando i Conventional Commits per determinare il tipo di incremento di versione (patch, minor, major):
+
+- `feat:` → minor
+- `fix:` → patch
+- `perf:` → patch
+- Breaking changes → major
+- `docs:`, `chore:`, `refactor:`, `test:` ecc. → **non bumpano** la versione ma appaiono comunque nel changelog
+
+Poi apre o aggiorna una **Release PR** che:
 
 - Propone il nuovo numero di versione
 - Aggiorna `package.json` con la versione
-- Genera il `CHANGELOG.md` basato sui commit
+- Genera il `CHANGELOG.md` basato su tutti i commit
 - Crea una GitHub Release quando la PR viene mergiata
 
 ### Come usarlo
