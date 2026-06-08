@@ -25,11 +25,9 @@ Template GitHub per nuovi progetti. Standardizza il tooling iniziale (linting, f
 ├── .gitignore
 ├── .prettierrc
 ├── .prettierignore
-├── .release-please-manifest.json
 ├── eslint.config.js
 ├── LICENSE
 ├── package.json
-├── release-please-config.json
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
@@ -76,12 +74,6 @@ Regole base di Prettier + plugin `prettier-plugin-tailwindcss`:
 - Override per YAML (print width 120)
 - Override per Markdown (print width 100, prose wrap preserve)
 
-### `.release-please-config.json` e `.release-please-manifest.json` — Versionamento
-
-`release-please-config.json` configura release-please con `changelog-sections` personalizzati in italiano per tutti i tipi di commit (`feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `style`, `perf`, `ci`, `build`, `revert`) e il plugin `sentence-case`.
-
-`.release-please-manifest.json` contiene la versione corrente del progetto (`1.0.0`) e viene aggiornato automaticamente da release-please.
-
 ### `.prettierignore` — Esclusioni formattazione
 
 Esclude da Prettier: `node_modules`, `dist`, `build`, `.netlify`, `.github`, `pnpm-lock.yaml`, `routeTree.gen.ts` e altri.
@@ -103,10 +95,6 @@ Flat config con:
   - `type-check` — `tsc --noEmit`
 
 Nessuna dipendenza inclusa. Le installi tu in base al progetto.
-
-### `release-please-config.json` — Configurazione versionamento
-
-Vedi la [sezione dedicata](#release-please-configjson-e-release-please-manifestjson--versionamento).
 
 ### `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json` — TypeScript
 
@@ -132,7 +120,6 @@ Il template fornisce la base per:
 | **TypeScript** | Controllo statico dei tipi |
 | **ESLint**         | Analisi statica del codice |
 | **Prettier**       | Formattazione automatica   |
-| **release-please** | Automazione versioni       |
 | **opencode**       | AI agent su GitHub Actions |
 
 ## Come utilizzare questo template
@@ -161,8 +148,6 @@ xcopy templates\.prettierrc C:\tuo-progetto\
 xcopy templates\.prettierignore C:\tuo-progetto\
 xcopy templates\eslint.config.js C:\tuo-progetto\
 xcopy templates\package.json C:\tuo-progetto\
-xcopy templates\release-please-config.json C:\tuo-progetto\
-xcopy templates\.release-please-manifest.json C:\tuo-progetto\
 xcopy templates\tsconfig*.json C:\tuo-progetto\
 ```
 
@@ -265,7 +250,6 @@ A ogni push sul branch `main`, release-please analizza i commit usando i Convent
 - `fix:` → patch
 - `perf:` → patch
 - Breaking changes → major
-- `docs:`, `chore:`, `refactor:`, `test:` ecc. → **non bumpano** la versione ma appaiono comunque nel changelog
 
 Poi apre o aggiorna una **Release PR** che:
 
@@ -283,9 +267,7 @@ Poi apre o aggiorna una **Release PR** che:
 
 ### Personalizzazione
 
-La configurazione è già esterna nei file `release-please-config.json` e `.release-please-manifest.json`. Per modificare il comportamento (es. release-type, sezioni changelog, plugin), aggiorna direttamente `release-please-config.json`.
-
-Per configurazioni più avanzate (es. monorepo, path multipli), consulta la [documentazione ufficiale](https://github.com/googleapis/release-please).
+Per configurazioni personalizzate (es. sezioni changelog, plugin), crea un file `release-please-config.json` e aggiorna il workflow secondo la [documentazione ufficiale](https://github.com/googleapis/release-please-action#advanced-release-configuration).
 
 ## Configurazione repository
 
