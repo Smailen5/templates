@@ -29,8 +29,9 @@ Ordine di verifica: `format:check` → `lint:check` → `type-check`.
 - **Merge**: solo squash merge via PR, nessun merge commit, history lineare
 - **Branch protection su `main`**: PR obbligatoria, branch up-to-date, linear history, auto-delete head branches
 - **`release-please` remote branch** (`origin/release-please--branches--main--components--templates`) — gestito automaticamente, **non toccarlo**
-- **`.gitignore` è un placeholder** — va sostituito in base allo stack del progetto
 - **`eslint.config.js`** — se non si usa React, rimuovere i blocchi `// [React]` (import, plugins, rules, settings)
+- **`release-please-config.json`** — configurazione release-please con `changelog-sections` in italiano per tutti i tipi di commit
+- **`.github/workflows/ci.yml`** — workflow CI disattivato (`if: false`); attivarlo rimuovendo la condizione
 - **Nessun test framework** configurato di default
 
 ## Issue e PR su GitHub
