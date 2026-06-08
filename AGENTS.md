@@ -30,7 +30,7 @@ Ordine di verifica: `format:check` → `lint:check` → `type-check`.
 - **Branch protection su `main`**: PR obbligatoria, branch up-to-date, linear history, auto-delete head branches
 - **`release-please` remote branch** (`origin/release-please--branches--main--components--templates`) — gestito automaticamente, **non toccarlo**
 - **`eslint.config.js`** — se non si usa React, rimuovere i blocchi `// [React]` (import, plugins, rules, settings)
-- **`release-please-config.json`** — configurazione release-please con `changelog-sections` in italiano per tutti i tipi di commit
+- **`release-please-config.json`** — configurazione release-please con `release-type: node`, `changelog-sections` in italiano per tutti i tipi di commit e plugin `sentence-case`
 - **`.github/workflows/ci.yml`** — workflow CI disattivato (`if: false`); attivarlo rimuovendo la condizione
 - **Nessun test framework** configurato di default
 
