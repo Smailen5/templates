@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Smailen5/templates/compare/v1.2.0...v1.2.1) (2026-06-08)
+
+
+### Bug Fixes
+
+* cambia release-type da simple a node ([#43](https://github.com/Smailen5/templates/issues/43)) ([2f35bf2](https://github.com/Smailen5/templates/commit/2f35bf2ba9790f92dcc42f7afc3a4dcf18d25d9a))
+
 ## [1.2.0](https://github.com/Smailen5/templates/compare/v1.1.0...v1.2.0) (2026-06-08)
 
 
