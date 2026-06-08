@@ -11,5 +11,7 @@ release
 routeTree.gen.ts
 eslint.config.js
 .prettierrc
+release-please-config.json
+.release-please-manifest.json
 pnpm-lock.yaml
 CHANGELOG.md

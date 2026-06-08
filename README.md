@@ -18,15 +18,18 @@ Template GitHub per nuovi progetti. Standardizza il tooling iniziale (linting, f
 │   │   ├── test.yaml         # Richiesta test
 │   │   └── config.yml        # Disabilita issue vuote
 │   ├── workflows/
-│   │   ├── opencode.yml      # Workflow AI per PR e issue
+│   │   ├── ci.yml              # CI disattivato (if: false)
+│   │   ├── opencode.yml        # Workflow AI per PR e issue
 │   │   └── release-please.yml  # Automazione versioni e rilascio
 │   └── pull_request_template.md
 ├── .gitignore
 ├── .prettierrc
 ├── .prettierignore
+├── .release-please-manifest.json
 ├── eslint.config.js
 ├── LICENSE
 ├── package.json
+├── release-please-config.json
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
@@ -57,6 +60,10 @@ Workflow GitHub Actions che esegue **opencode** (AI agent) su issue e PR quando 
 
 Struttura standard: Descrizione, Riferimenti Issue, Modifiche Effettuate, Checklist.
 
+### `.github/workflows/ci.yml` — CI opzionale
+
+Workflow CI disattivato di default (`if: false`). Esegue `pnpm install --frozen-lockfile` e `pnpm format:check` su ogni PR verso `main`. Per attivarlo, rimuovi la riga `if: false` dal job.
+
 ### `.gitignore`
 
 Placeholder generico. Sostituiscilo con un `.gitignore` adatto al tuo stack (es. Node, Python).
@@ -68,6 +75,12 @@ Regole base di Prettier + plugin `prettier-plugin-tailwindcss`:
 - semi, single quote, trailing comma es5, print width 80, tab width 2
 - Override per YAML (print width 120)
 - Override per Markdown (print width 100, prose wrap preserve)
+
+### `.release-please-config.json` e `.release-please-manifest.json` — Versionamento
+
+`release-please-config.json` configura release-please con `changelog-sections` personalizzati in italiano per tutti i tipi di commit (`feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `style`, `perf`, `ci`, `build`, `revert`) e il plugin `sentence-case`.
+
+`.release-please-manifest.json` contiene la versione corrente del progetto (`1.0.0`) e viene aggiornato automaticamente da release-please.
 
 ### `.prettierignore` — Esclusioni formattazione
 
@@ -91,6 +104,10 @@ Flat config con:
 
 Nessuna dipendenza inclusa. Le installi tu in base al progetto.
 
+### `release-please-config.json` — Configurazione versionamento
+
+Vedi la [sezione dedicata](#release-please-configjson-e-release-please-manifestjson--versionamento).
+
 ### `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json` — TypeScript
 
 Pattern standard Vite a 3 file:
@@ -113,9 +130,10 @@ Il template fornisce la base per:
 | -------------- | -------------------------- |
 | **pnpm**       | Package manager veloce     |
 | **TypeScript** | Controllo statico dei tipi |
-| **ESLint**     | Analisi statica del codice |
-| **Prettier**   | Formattazione automatica   |
-| **opencode**   | AI agent su GitHub Actions |
+| **ESLint**         | Analisi statica del codice |
+| **Prettier**       | Formattazione automatica   |
+| **release-please** | Automazione versioni       |
+| **opencode**       | AI agent su GitHub Actions |
 
 ## Come utilizzare questo template
 
@@ -143,6 +161,8 @@ xcopy templates\.prettierrc C:\tuo-progetto\
 xcopy templates\.prettierignore C:\tuo-progetto\
 xcopy templates\eslint.config.js C:\tuo-progetto\
 xcopy templates\package.json C:\tuo-progetto\
+xcopy templates\release-please-config.json C:\tuo-progetto\
+xcopy templates\.release-please-manifest.json C:\tuo-progetto\
 xcopy templates\tsconfig*.json C:\tuo-progetto\
 ```
 
@@ -255,17 +275,9 @@ A ogni push sul branch `main`, release-please analizza i commit usando i Convent
 
 ### Personalizzazione
 
-Se vuoi configurare branch aggiuntivi o release-type diversi, modifica il file:
+La configurazione è già esterna nei file `release-please-config.json` e `.release-please-manifest.json`. Per modificare il comportamento (es. release-type, sezioni changelog, plugin), aggiorna direttamente `release-please-config.json`.
 
-```yaml
-- uses: googleapis/release-please-action@v4
-  with:
-    token: ${{ secrets.GITHUB_TOKEN }}
-    release-type: node
-    # Altre opzioni: python, terraform, simple, ecc.
-```
-
-Per configurazioni più avanzate (es. monorepo, path multipli), aggiungi un file `release-please-config.json` nella root del progetto.
+Per configurazioni più avanzate (es. monorepo, path multipli), consulta la [documentazione ufficiale](https://github.com/googleapis/release-please).
 
 ## Configurazione repository
 
