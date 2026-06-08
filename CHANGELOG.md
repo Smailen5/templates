@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Smailen5/templates/compare/v1.1.0...v1.2.0) (2026-06-08)
+
+
+### Features
+
+* aggiungi workflow CI per PR su main ([#39](https://github.com/Smailen5/templates/issues/39)) ([29e7417](https://github.com/Smailen5/templates/commit/29e7417b286fa9b49cb6fdfee5049eb499dd5764))
+
 ## [1.1.0](https://github.com/Smailen5/templates/compare/v1.0.0...v1.1.0) (2026-06-05)
 
 
